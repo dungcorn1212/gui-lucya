@@ -1,0 +1,72 @@
+<head>
+    <script src="open.js"></script>
+
+    <style>
+      :root {
+	--size-div: 3;
+	--page-width: 200px;
+	--page-height: 100px;
+}
+body {
+	margin: 0 0;
+	background: pink;
+	font-family: "Dancing  Script", cursive;
+	font-size: calc(8.3px * var(--size-div));
+}
+.letter {
+	display: grid;
+	place-items: center;
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	vertical-align: middle;
+	justify-content: center;
+}
+.increment:hover {
+	--size-div: 3.1;
+}
+
+.letter .page {
+	background: rgb(255, 237, 237);
+	width: calc(var(--page-width) * var(--size-div));
+	height: calc(var(--page-height) * var(--size-div));
+	margin: auto;
+	border-radius: calc(6.3px * var(--size-div));
+	box-shadow: calc(5.3px * --size-div) calc(6.3px * var(--size-div)) #888888;
+}
+
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: calc(100px * var(--size-div)) solid transparent;
+	border-right: calc(100px * var(--size-div)) solid transparent;
+	border-radius: calc(3.3px * var(--size-div));
+	border-top: calc(60px * var(--size-div)) solid #ffd4fa;
+}
+
+#content {
+	display: none;
+	text-align: middle;
+	font-size: calc(5.2px * var(--size-div));
+	margin: 10px 10px;
+}
+#name {
+	padding: calc(26px * var(--size-div)) calc(7px * 3);
+	user-select: none;
+}
+
+    </style>
+  </head>
+  
+<script src="open.js"></script>
+<div class="letter" onclick="display_letter()">
+	<div class="page increment" id="base">
+		<div class="arrow-down"></div>
+		<div id="name">To Lucya   </div>
+		<div id="content" style="font-family:verdana;">Happy new year,
+			 I love your butt
+           
+        </div>
+        
+	</div>
+</div>
